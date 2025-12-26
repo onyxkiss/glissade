@@ -9,7 +9,6 @@ class CraftSystem : public Resource {
 	GDCLASS(CraftSystem, Resource);
 
 public:
-	void set_sim_vars_defs(const Vector<SimVarDefinition> &p_sim_var_defs);
 	Vector<SimVarDefinition> get_sim_vars_defs() const;
 
 protected:

@@ -47,29 +47,18 @@ public:
 		DEGREES_PER_SECOND_SQUARED
 	};
 
-	StringName get_name() const;
-	void set_name(const StringName &p_name);
-
+	StringName get_var_name() const;
 	Type get_type() const;
-	void set_type(Type p_type);
-
 	Unit get_unit() const;
-	void set_unit(Unit p_unit);
-
 	Variant get_default_value() const;
-	void set_default_value(const Variant &p_value);
-
 	Variant get_max_value() const;
-	void set_max_value(const Variant &p_value);
-
 	Variant get_min_value() const;
-	void set_min_value(const Variant &p_value);
 
 protected:
 	static void _bind_methods();
 
 private:
-	StringName name;
+	StringName var_name;
 	Type type;
 	Unit unit = NONE;
 

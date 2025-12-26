@@ -10,10 +10,7 @@ class CraftData : public Resource {
     GDCLASS(CraftData, Resource);
 
 public:
-    void set_scene(const Ref<PackedScene> &p_scene);
     Ref<PackedScene> get_scene() const;
-
-    void set_systems(const Vector<CraftSystem> &p_systems);
     Vector<CraftSystem> get_systems() const;
 
 protected:
