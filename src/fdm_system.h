@@ -10,11 +10,11 @@ class FDMSystem : public CraftSystem {
 	GDCLASS(FDMSystem, CraftSystem);
 
 public:
-    // ...
+	// ...
 
 protected:
 	static void _bind_methods();
 
 private:
-    FDMExec fdm_exec;
+	FDMExec fdm_exec;
 };

@@ -7,16 +7,16 @@
 using namespace godot;
 
 class CraftData : public Resource {
-    GDCLASS(CraftData, Resource);
+	GDCLASS(CraftData, Resource);
 
 public:
-    Ref<PackedScene> get_scene() const;
-    Vector<CraftSystem> get_systems() const;
+	Ref<PackedScene> get_scene() const;
+	Vector<CraftSystem> get_systems() const;
 
 protected:
-    static void _bind_methods();
+	static void _bind_methods();
 
 private:
-    Ref<PackedScene> scene;
-    Vector<CraftSystem> systems;
+	Ref<PackedScene> scene;
+	Vector<CraftSystem> systems;
 };

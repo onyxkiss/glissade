@@ -9,11 +9,11 @@ class Mission : public Resource {
 	GDCLASS(Mission, Resource);
 
 public:
-    Vector<CraftState> get_craft_states() const;
+	Vector<CraftState> get_craft_states() const;
 
 protected:
-    static void _bind_methods();
+	static void _bind_methods();
 
  private:
-    Vector<CraftState> craft_states;
+	Vector<CraftState> craft_states;
 }
