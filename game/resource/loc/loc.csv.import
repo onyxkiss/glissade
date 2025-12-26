@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://421bg7qw03sr"
+
+[deps]
+
+files=["res://resource/loc/loc.en.translation", "res://resource/loc/loc.ru.translation"]
+
+source_file="res://resource/loc/loc.csv"
+dest_files=["res://resource/loc/loc.en.translation", "res://resource/loc/loc.ru.translation"]
+
+[params]
+
+compress=true
+delimiter=0

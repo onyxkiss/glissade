@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5ux2t5fprtgq"]
+
+[ext_resource type="Script" uid="uid://b3b1b1hylvysl" path="res://game/ui/menu/main_menu.gd" id="1_fen44"]
+[ext_resource type="PackedScene" uid="uid://rak316npkybj" path="res://game/ui/menu/screens/main.tscn" id="3_pga7v"]
+[ext_resource type="PackedScene" uid="uid://cra5uoon3s7w6" path="res://game/ui/menu/screens/settings.tscn" id="4_mqtnr"]
+[ext_resource type="PackedScene" uid="uid://bfuhnl5066c5g" path="res://game/ui/menu/screens/quit.tscn" id="5_xtc1r"]
+
+[node name="MainMenu" type="Control" node_paths=PackedStringArray("darken")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fen44")
+darken = NodePath("Darken")
+default_screen = "main"
+screens = Dictionary[String, PackedScene]({
+"main": ExtResource("3_pga7v"),
+"quit": ExtResource("5_xtc1r"),
+"settings": ExtResource("4_mqtnr")
+})
+metadata/_custom_type_script = "uid://b3b1b1hylvysl"
+
+[node name="Darken" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.25098)

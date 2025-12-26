@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0raq78mxct0h"]
+
+[ext_resource type="Script" uid="uid://c8ukmx66j4ar4" path="res://core/system.gd" id="1_i1ka3"]
+[ext_resource type="PackedScene" uid="uid://c5ux2t5fprtgq" path="res://game/ui/menu/main_menu.tscn" id="2_m3jav"]
+
+[node name="System" type="Node" node_paths=PackedStringArray("menu")]
+process_mode = 3
+script = ExtResource("1_i1ka3")
+menu = NodePath("Menu")
+
+[node name="Menu" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="MainMenu" parent="Menu" instance=ExtResource("2_m3jav")]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbjyyd6o7yymi"]
+
+[ext_resource type="PackedScene" uid="uid://5f7x5h8iehfw" path="res://game/ui/sim/sim_ui.tscn" id="1_6xhw6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lc8ms"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_dyenr"]
+sky_material = SubResource("ProceduralSkyMaterial_lc8ms")
+
+[sub_resource type="Environment" id="Environment_e0ubd"]
+background_mode = 2
+sky = SubResource("Sky_dyenr")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="SimWorld" type="Node"]
+
+[node name="SpatialWorld" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SpatialWorld"]
+environment = SubResource("Environment_e0ubd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SpatialWorld"]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="SpatialWorld"]
+
+[node name="SimUI" parent="." instance=ExtResource("1_6xhw6")]

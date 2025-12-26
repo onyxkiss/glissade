@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://5f7x5h8iehfw"]
+
+[ext_resource type="Script" uid="uid://cfobnl231rcy4" path="res://game/ui/sim/sim_ui.gd" id="1_qjufi"]
+
+[node name="SimUI" type="CanvasLayer" node_paths=PackedStringArray("toolbar")]
+layer = -1
+script = ExtResource("1_qjufi")
+toolbar = NodePath("Toolbar")
+
+[node name="Toolbar" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 32)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Toolbar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Toolbar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Label" type="Label" parent="Toolbar/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Test"
+
+[node name="Label2" type="Label" parent="Toolbar/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Test"
+
+[node name="Label3" type="Label" parent="Toolbar/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Test"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Toolbar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MainMenu" type="Button" parent="Toolbar/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "GEN.MAIN_MENU"
+
+[connection signal="pressed" from="Toolbar/HBoxContainer/HBoxContainer2/MainMenu" to="." method="_on_main_menu_pressed"]

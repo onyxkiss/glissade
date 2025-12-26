@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdq0rec2a4upn"]
+
+[ext_resource type="Script" uid="uid://cjq7vtjog3ski" path="res://addons/load/load.gd" id="1_lx6fa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lx6fa"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kw7r"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="LoadingScreen" type="CanvasLayer" node_paths=PackedStringArray("_progress_bar", "_poll_timer", "_hide_timer")]
+script = ExtResource("1_lx6fa")
+_progress_bar = NodePath("Control/ProgressBar")
+_poll_timer = NodePath("PollTimer")
+_hide_timer = NodePath("HideTimer")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_lx6fa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3kw7r")
+show_percentage = false
+
+[node name="HideTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="PollTimer" type="Timer" parent="."]
+wait_time = 0.05

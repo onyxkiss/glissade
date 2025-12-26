@@ -1,0 +1,16 @@
+key,en,ru
+GAME.TITLE,Glissade,Glissade
+GEN.CONTINUE,Continue,Продолжить
+GEN.CONFIRM,Confirm,Подтвердить
+GEN.CANCEL,Cancel,Отменить
+GEN.GO_BACK,Go back,Назад
+GEN.YES,Yes,Да
+GEN.NO,No,Нет
+GEN.QUIT,Quit,Выйти
+GEN.MAIN_MENU,Main menu,Главное меню
+GEN.SETTINGS,Settings,Настройки
+GEN.APPLY_SETTINGS,Apply settings,Применить настройки
+MENU.NEW_FLIGHT,New flight,Новый полёт
+MENU.QUIT_DIALOGUE,Confirm quit.,Подтвердите завершение работы.
+SET.LANG,Language,Язык
+SIM.PAUSED,Paused,Пауза
