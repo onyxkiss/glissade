@@ -16,4 +16,4 @@ protected:
 
  private:
 	Vector<CraftState> craft_states;
-}
+};
